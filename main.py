@@ -1,7 +1,3 @@
-"""
-Training script of ReferFormer
-Modified from DETR (https://github.com/facebookresearch/detr)
-"""
 import argparse
 import datetime
 import json
@@ -24,7 +20,7 @@ from tools.load_pretrained_weights import pre_trained_model_to_finetune
 import opts
 import os
 # os.environ["CUDA_VISIBLE_DEVICES"] = '3,4,5,7'
-# os.environ["CUDA_VISIBLE_DEVICES"] = '4,5,6,7'
+
 
 def main(args):
     args.masks = True
@@ -238,7 +234,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser('ReferFormer training and evaluation script', parents=[opts.get_args_parser()])
+    parser = argparse.ArgumentParser('BIFIT training and evaluation script', parents=[opts.get_args_parser()])
     args = parser.parse_args()
     if args.output_dir:
         Path(args.output_dir).mkdir(parents=True, exist_ok=True)

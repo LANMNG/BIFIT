@@ -1,7 +1,3 @@
-'''
-Inference code for ReferFormer, on Ref-Youtube-VOS
-Modified from DETR (https://github.com/facebookresearch/detr)
-'''
 import argparse
 import json
 import random
@@ -37,7 +33,7 @@ color_list = color_list.astype('uint8').tolist()
 
 # build transform
 transform = T.Compose([
-    T.Resize(320),
+    T.Resize(360),
     T.ToTensor(),
     T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
@@ -321,6 +317,6 @@ def vis_add_mask(img, mask, color):
   
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser('ReferFormer inference script', parents=[opts.get_args_parser()])
+    parser = argparse.ArgumentParser('BIFIT inference script', parents=[opts.get_args_parser()])
     args = parser.parse_args()
     main(args)

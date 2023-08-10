@@ -1,7 +1,7 @@
 import argparse
 
 def get_args_parser():
-    parser = argparse.ArgumentParser('ReferFormer training and inference scripts.', add_help=False)
+    parser = argparse.ArgumentParser('BIFIT training and inference scripts.', add_help=False)
     parser.add_argument('--lr', default=5e-5, type=float)
     parser.add_argument('--lr_backbone', default=1e-5, type=float)
     parser.add_argument('--lr_backbone_names', default=['backbone.0'], type=str, nargs='+')

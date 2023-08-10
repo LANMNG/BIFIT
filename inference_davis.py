@@ -1,8 +1,3 @@
-'''
-Inference code for ReferFormer, on Ref-Youtube-VOS
-Modified from DETR (https://github.com/facebookresearch/detr)
-Ref-Davis17 does not support visualize
-'''
 import argparse
 import json
 import random
@@ -330,7 +325,7 @@ def vis_add_mask(img, mask, color):
   
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser('ReferFormer inference script', parents=[opts.get_args_parser()])
+    parser = argparse.ArgumentParser('BIFIT inference script', parents=[opts.get_args_parser()])
     args = parser.parse_args()
     main(args)
 

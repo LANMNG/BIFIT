@@ -1,7 +1,3 @@
-"""
-ReferFormer model class.
-Modified from DETR (https://github.com/facebookresearch/detr)
-"""
 import torch
 import torch.nn.functional as F
 from torch import nn
